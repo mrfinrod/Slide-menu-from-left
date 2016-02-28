@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="VEk2Ry12UnEzEFwzXC4HCQ15cwpPQTMZIA5cF148FylsJWAIYjkEBA==">
+    <title>My Yii Application</title>
+    <link href="./My Yii Application_files/bootstrap.css" rel="stylesheet">
+    <link href="./My Yii Application_files/site.css" rel="stylesheet">
+    <link href="./My Yii Application_files/slide-panel.css" rel="stylesheet">
+</head>
+<body class="">
+
+<nav>
+    <ul class="list-unstyled main-menu">
+
+        <!--Include your navigation here-->
+        <li class="text-right"><a href="/" id="nav-close">X</a></li>
+        <li><a href="/">Menu One <span class="icon"></span></a></li>
+        <li><a href="/">Menu Two <span class="icon"></span></a></li>
+        <li><a href="/">Menu Three <span class="icon"></span></a></li>
+        <li><a href="/">Dropdown<span class="caret"></span></a>
+            <ul class="list-unstyled" data-index="0" style="display: none;">
+                <li class="sub-nav"><a href="/">Sub Menu One <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="/">Sub Menu Two <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="/">Sub Menu Three <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="/">Sub Menu Four <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="/">Sub Menu Five <span class="icon"></span></a></li>
+            </ul>
+        </li>
+        <li><a href="/">Menu Four <span class="icon"></span></a></li>
+        <li><a href="/">Menu Five <span class="icon"></span></a></li>
+    </ul>
+</nav>
+
+<div class="wrap">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <!--Include your brand here-->
+        <a class="navbar-brand" href="/">Menu</a>
+
+        <div class="navbar-header pull-right">
+            <a id="nav-expander" class="nav-expander fixed">
+                MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="site-index">
+
+            <div class="jumbotron">
+                <h1>Congratulations!</h1>
+
+                <p class="lead">You have successfully created your Yii-powered application.</p>
+
+                <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com/">Get started with Yii</a></p>
+            </div>
+
+            <div class="body-content">
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2>Heading</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu
+                            fugiat nulla pariatur.</p>
+
+                        <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>Heading</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu
+                            fugiat nulla pariatur.</p>
+
+                        <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum »</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>Heading</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu
+                            fugiat nulla pariatur.</p>
+
+                        <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions
+                                »</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">© My Company 2016</p>
+
+        <p class="pull-right">Powered by <a href="/" rel="external">Yii Framework</a></p>
+    </div>
+</footer>
+
+<script src="./My Yii Application_files/jquery.js"></script>
+<script src="./My Yii Application_files/yii.js"></script>
+<script src="./My Yii Application_files/jquery.navgoco.js"></script>
+<script src="./My Yii Application_files/fastclick.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+        FastClick.attach(document.body);
+
+        //Navigation Menu Slider
+        $('#nav-expander').on('click', function (e) {
+            e.preventDefault();
+            $('body').toggleClass('nav-expanded');
+        });
+        $('#nav-close').on('click', function (e) {
+            e.preventDefault();
+            $('body').removeClass('nav-expanded');
+        });
+
+
+        // Initialize navgoco with default options
+        $(".main-menu").navgoco({
+            caret: '<span class="caret"></span>',
+            accordion: false,
+            openClass: 'open',
+            save: true,
+            cookie: {
+                name: 'navgoco',
+                expires: false,
+                path: '/'
+            },
+            slide: {
+                duration: 300,
+                easing: 'swing'
+            }
+        });
+    });</script>
+
+</body>
+</html>
